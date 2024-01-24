@@ -9,7 +9,7 @@ p = pyaudio.PyAudio()
 WIDTH = 2
 RATE = int(p.get_default_input_device_info()['defaultSampleRate'])
 DEVICE = p.get_default_input_device_info()['index']
-alpha = 0.5  # Facteur de lissage (entre 0 et 1)
+alpha = 0.5  
 rms = 1
 
 def callback(in_data, frame_count, time_info, status):
@@ -55,10 +55,9 @@ stream.start_stream()
 
 try:
     while stream.is_active():
-        time.sleep(0.1)  # Vous pouvez ajuster l'intervalle de temps si nécessaire
+        time.sleep(0.1)
 
 except KeyboardInterrupt:
-    # Arrêtez le flux lorsqu'une interruption clavier se produit
     stream.stop_stream()
     stream.close()
     p.terminate()
