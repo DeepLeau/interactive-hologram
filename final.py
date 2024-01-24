@@ -26,17 +26,17 @@ def callback(in_data, frame_count, time_info, status):
 # Variables à déterminer
 
     # Variables claquement de doigts
-    seuil_micro_min = 70
-    seuil_micro_max = 90
-    x_micro,y_micro = 50,50
+    # seuil_micro_min = 70
+    # seuil_micro_max = 90
+    # x_micro,y_micro = 50,50
     
     # Variables souffle sur la caméra
     seuil_souffle = 120
     x_camera, y_camera = 50,50
     
-    if db > seuil_micro_min and db < seuil_micro_max:
-        pyautogui.moveTo(x_micro, y_micro)
-        pyautogui.click()
+    # if db > seuil_micro_min and db < seuil_micro_max:
+    #   pyautogui.moveTo(x_micro, y_micro)
+    #   pyautogui.click()
     
     elif db > seuil_souffle :
         pyautogui.moveTo(x_camera,y_camera)
@@ -91,8 +91,9 @@ while True:
             
             finger_4_x, finger_4_y, finger_8_x, finger_8_y = int(fingers_tip_points[0].x * image.shape[1]*largeur/w), int(fingers_tip_points[0].y * image.shape[0]*hauteur/h), int(fingers_tip_points[1].x * image.shape[1]*largeur/w), int(fingers_tip_points[1].y * image.shape[0]*hauteur/h)
 
-            x = (finger_4_x + finger_8_x)/2
-            y = (finger_4_y + finger_8_y)/2
+            finger_20_x, finger_20_y = int(fingers_tip_points[4].x * image.shape[1]*largeur/w), int(fingers_tip_points[4].y * image.shape[0]*hauteur/h)
+
+            pyautogui.moveTo(finger_20_x, finger_20_y,_pause = False)
 
             pyautogui.moveTo(x, y,_pause = False)
 
