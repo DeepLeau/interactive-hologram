@@ -95,8 +95,6 @@ while True:
 
             pyautogui.moveTo(finger_20_x, finger_20_y,_pause = False)
 
-            pyautogui.moveTo(x, y,_pause = False)
-
             for tip_point in fingers_tip_points:
                 tip_point_x, tip_point_y = int(tip_point.x * image.shape[1]*largeur/w), int(tip_point.y * image.shape[0]*hauteur/h)
                 cv2.line(image, (palm_base_x, palm_base_y), (tip_point_x, tip_point_y), (255, 0, 0), 2)
