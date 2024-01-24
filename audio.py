@@ -9,7 +9,7 @@ p = pyaudio.PyAudio()
 WIDTH = 2
 RATE = int(p.get_default_input_device_info()['defaultSampleRate'])
 DEVICE = p.get_default_input_device_info()['index']
-alpha = 0.5  
+alpha = 0.5  # Facteur de lissage (entre 0 et 1)
 rms = 1
 
 def callback(in_data, frame_count, time_info, status):
@@ -20,13 +20,23 @@ def callback(in_data, frame_count, time_info, status):
     
     db = 20 * log10(rms)
 
-# Les variables seuil, x et y sont à changer selon tes besoins, x et y = coordonnées de la position où tu veux mettre la souris et seuil c'est le seuil à partir du quel tu considères que ca fasse un claquement de doigts
+# Variables à déterminer
 
-    seuil = 70
-    x,y = 50,50
+    # Variables claquement de doigts
+    seuil_micro_min = 70
+    seuil_micro_max = 90
+    x_micro,y_micro = 50,50
     
-    if db > seuil:
-        pyautogui.moveTo(x, y)
+    # Variables souffle sur la caméra
+    seuil_souffle = 120
+    x_camera, y_camera = 50,50
+    
+    if db > seuil_micro_min and db < seuil_micro_max:
+        pyautogui.moveTo(x_micro, y_micro)
+        pyautogui.click()
+    
+    elif db > seuil_souffle :
+        pyautogui.moveTo(x_camera,y_camera)
         pyautogui.click()
 
     print(f"Décibels: {db}")
@@ -45,9 +55,10 @@ stream.start_stream()
 
 try:
     while stream.is_active():
-        time.sleep(0.1)  
+        time.sleep(0.1)  # Vous pouvez ajuster l'intervalle de temps si nécessaire
 
 except KeyboardInterrupt:
+    # Arrêtez le flux lorsqu'une interruption clavier se produit
     stream.stop_stream()
     stream.close()
     p.terminate()
