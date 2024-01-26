@@ -45,7 +45,7 @@ Displaying screen : directly implemented in the hologram.
 Control monitor : allowing you to run the Python code and the Figma file.
 
  
-![Scheme]([https://github.com/DeepLeau/interactive-hologram/raw/main/Images/couverture.jpg](https://github.com/DeepLeau/interactive-hologram/blob/main/Images/sche%CC%81ma_github.png
+![Scheme]([https://github.com/DeepLeau/interactive-hologram/raw/main/Images/couverture.jpg](https://github.com/DeepLeau/interactive-hologram/main/Images/sche%CC%81ma_github.png
 ))
 
 
