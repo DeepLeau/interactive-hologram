@@ -1,6 +1,6 @@
 # Interactive hologram
 
- ![alt text]([http://url/to/img.png](https://github.com/DeepLeau/interactive-hologram/blob/main/Images/couverture.jpg))
+![Test](https://github.com/DeepLeau/interactive-hologram/raw/main/Images/couverture.jpg)
 
 ## Basic Overview
 The interactive hologram is a platform that enables objects to be viewed with an illusion of depth and interacted with in real time using hand detection.
