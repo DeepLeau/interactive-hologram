@@ -1,6 +1,6 @@
 # Interactive hologram
 
-![Test](https://github.com/DeepLeau/interactive-hologram/raw/main/Images/couverture.jpg)
+![cover image](https://github.com/DeepLeau/interactive-hologram/raw/main/Images/couverture.jpg)
 
 ## Basic Overview
 The interactive hologram is a platform that enables objects to be viewed with an illusion of depth and interacted with in real time using hand detection.
@@ -45,9 +45,8 @@ Displaying screen : directly implemented in the hologram.
 Control monitor : allowing you to run the Python code and the Figma file.
 
  
-
-
-
+![Scheme]([https://github.com/DeepLeau/interactive-hologram/raw/main/Images/couverture.jpg](https://github.com/DeepLeau/interactive-hologram/blob/main/Images/sche%CC%81ma_github.png
+))
 
 
 ## Launch the Interactive Hologram
