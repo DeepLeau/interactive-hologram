@@ -46,7 +46,7 @@ Control monitor : allowing you to run the Python code and the Figma file.
 
 
  
-![Scheme](https://github.com/DeepLeau/interactive-hologram/main/Images/sche%CC%81ma_github.png)
+![Scheme](https://github.com/DeepLeau/interactive-hologram/raw/main/Images/sche%CC%81ma_github.png)
 
 
 
