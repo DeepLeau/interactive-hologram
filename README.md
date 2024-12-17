@@ -61,7 +61,7 @@ Line 14 of the code InteractiveHolo.py: Modify the variable to find your webcam'
 
 2. Control Monitor
 2.1 Figma
-Get the file from this public link (you'll need a Figma account). Normally, the file is published, so it's public. If you can't get it, you can send me a request on gaetan.carrade@gmail.com
+Get the file from this public link (you'll need a Figma account).
 link -> InteractiveHologramV2-(Community)
 2.2 Python
 Make sure that you have correctly imported all the necessary libraries and that you can run the InteractiveHolo.py code without error. Run it from a code editor or directly from the terminal.
