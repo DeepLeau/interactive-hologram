@@ -12,7 +12,7 @@ Get to know more about the interactive hologram project on DVIC website (link of
 
 ## Clone the Code
 To clone the project:
-Clone the repository: git clone https://github.com/GaetanCrd/InteractiveHologram/tree/main
+Clone the repository: git clone [https://github.com/GaetanCrd/InteractiveHologram/tree/main](https://github.com/DeepLeau/interactive-hologram)
 Install the required libraries (cv2, mediapipe, pyautogui, tensorflow, audioop, pyaudio)
 Adjust thresholds to suit your hardware (seuil de déclenchement du clic pouce/index, seuil de déclenchement du clic avec l’audio => voir les commentaires du code)
 
